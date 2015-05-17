@@ -23,5 +23,5 @@ object Start extends App {
 
   implicit val timeout = Timeout(5.seconds)
   // start a new HTTP server on port 8080 with our service actor as the handler
-  IO(Http) ? Http.Bind(service, interface = "127.0.0.1", port = 9090)
+  IO(Http) ? Http.Bind(service, port = 9090)
 }
